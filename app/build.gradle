@@ -56,5 +56,4 @@ dependencies {
         exclude module: 'okhttp'
     }
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-
 }
