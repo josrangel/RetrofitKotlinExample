@@ -1,6 +1,6 @@
-package com.example.retroplo.Network
+package com.example.retroplo.network
 
-import com.example.retroplo.Entity.RandomClass
+import com.example.retroplo.entity.RandomClass
 import retrofit2.Call
 import retrofit2.http.GET
 

@@ -1,4 +1,4 @@
-package com.example.retroplo.Entity
+package com.example.retroplo.entity
 
 import com.google.gson.annotations.SerializedName
 
