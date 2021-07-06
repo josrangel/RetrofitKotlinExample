@@ -2,6 +2,7 @@ package com.example.retroplo.network
 
 import com.example.retroplo.entity.RandomClass
 import com.example.retroplo.util.Constants
+import org.jetbrains.anko.doAsync
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -15,9 +16,10 @@ class RandomRepo() {
             .build()
     }
 
-    fun getPersonRandomRepo(){
+    fun getPersonRandomRepo():Response<RandomClass>{
         val personEndpoint:EndPoint = instanciaRetrofit.create()
         val response: Response<RandomClass> = personEndpoint.getPerson().execute()
+        return response
     }
 }
 

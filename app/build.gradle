@@ -56,4 +56,6 @@ dependencies {
         exclude module: 'okhttp'
     }
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    implementation 'org.jetbrains.anko:anko-common:0.10.8'
 }
