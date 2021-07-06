@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.create
 
-class RandomInterceptor() {
+class RandomRepo() {
     private val instanciaRetrofit by lazy {
         Retrofit.Builder()
             .baseUrl(Constants.BASE_URL)
@@ -15,7 +15,7 @@ class RandomInterceptor() {
             .build()
     }
 
-    fun getPerson(){
+    fun getPersonRandomRepo(){
         val personEndpoint:EndPoint = instanciaRetrofit.create()
         val response: Response<RandomClass> = personEndpoint.getPerson().execute()
     }
