@@ -13,16 +13,23 @@ import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 
 /** Tutoriales
+ *
  * Retrofit
  * https://square.github.io/retrofit/
  * https://devexperto.com/retrofit-android-kotlin/
  * https://howtodoinjava.com/retrofit2/query-path-parameters/
+ *
+ * Interceptor
+ * https://stackoverflow.com/questions/32514410/logging-with-retrofit-2
  *
  * Api
  * https://randomuser.me/documentation
  *
  * RecyclerView
  * https://www.geeksforgeeks.org/android-recyclerview-in-kotlin/
+ *
+ * Picasso
+ * https://square.github.io/picasso/
  */
 
 class MainActivity : AppCompatActivity() {
