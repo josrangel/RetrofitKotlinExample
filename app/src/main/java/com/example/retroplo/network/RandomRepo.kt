@@ -18,7 +18,7 @@ class RandomRepo() {
 
     fun getPersonRandomRepo():Response<RandomClass>{
         val personEndpoint:EndPoint = instanciaRetrofit.create()
-        val response: Response<RandomClass> = personEndpoint.getPerson().execute()
+        val response: Response<RandomClass> = personEndpoint.getPerson(50).execute()
         return response
     }
 }
