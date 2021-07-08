@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.retroplo.R
 import com.example.retroplo.entity.ResultsItem
+import com.squareup.picasso.Picasso
 
 class PersonAdapter(private val mList: List<ResultsItem>) : RecyclerView.Adapter<PersonAdapter.ViewHolder>() {
 
@@ -26,14 +27,11 @@ class PersonAdapter(private val mList: List<ResultsItem>) : RecyclerView.Adapter
 
         val ItemsViewModel = mList[position]
 
-        // sets the image to the imageview from our itemHolder class
-        //holder.imageView.setImageResource(ItemsViewModel.name)
-
         // sets the text to the textview from our itemHolder class
         holder.tvName.text = ItemsViewModel.name?.title + " " + ItemsViewModel.name?.first + " " + ItemsViewModel.name?.last
         holder.tvEmail.text = ItemsViewModel.email
         holder.tvAddress.text = ItemsViewModel.location?.city + ", " + ItemsViewModel.location?.country
-
+        Picasso.get().load(ItemsViewModel.picture?.medium).into(holder.ivPerson);
     }
 
     // return the number of the items in the list
@@ -43,7 +41,7 @@ class PersonAdapter(private val mList: List<ResultsItem>) : RecyclerView.Adapter
 
     // Holds the views for adding it to image and text
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-        val imageView: ImageView = itemView.findViewById(R.id.ivPerson)
+        val ivPerson: ImageView = itemView.findViewById(R.id.ivPerson)
         val tvName: TextView = itemView.findViewById(R.id.tvName)
         val tvEmail: TextView = itemView.findViewById(R.id.tvEmail)
         val tvAddress: TextView = itemView.findViewById(R.id.tvAddress)
