@@ -46,10 +46,13 @@ dependencies {
 
     def okhttpVersion="4.9.1"
     def retrofitVersion="2.9.0"
+    def picassoVersion="2.71828"
     // define a BOM and its version
-    implementation(platform("com.squareup.okhttp3:okhttp-bom:$okhttpVersion"))
-    implementation("com.squareup.okhttp3:okhttp")
-    implementation("com.squareup.okhttp3:logging-interceptor")
+    implementation platform("com.squareup.okhttp3:okhttp-bom:$okhttpVersion")
+    implementation "com.squareup.okhttp3:okhttp"
+    implementation "com.squareup.okhttp3:logging-interceptor"
+    implementation "com.squareup.picasso:picasso:$picassoVersion"
+
 
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion"){
         // exclude Retrofit’s OkHttp peer-dependency module and define your own module import
