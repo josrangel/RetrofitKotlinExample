@@ -12,6 +12,19 @@ import com.example.retroplo.network.RandomRepo
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 
+/** Tutoriales
+ * Retrofit
+ * https://square.github.io/retrofit/
+ * https://devexperto.com/retrofit-android-kotlin/
+ * https://howtodoinjava.com/retrofit2/query-path-parameters/
+ *
+ * Api
+ * https://randomuser.me/documentation
+ *
+ * RecyclerView
+ * https://www.geeksforgeeks.org/android-recyclerview-in-kotlin/
+ */
+
 class MainActivity : AppCompatActivity() {
 
     lateinit var rvPersons: RecyclerView
