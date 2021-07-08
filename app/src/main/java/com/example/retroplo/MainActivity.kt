@@ -1,9 +1,7 @@
 package com.example.retroplo
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.retroplo.adapter.PersonAdapter
@@ -56,9 +54,9 @@ class MainActivity : AppCompatActivity() {
 
 
     fun getPersons() {
-        var interceptor = RandomRepo()
+        val interceptor = RandomRepo()
         doAsync {
-            var response = interceptor.getPersonRandomRepo()
+            val response = interceptor.getPersonRandomRepo()
             uiThread {
                 dataRV = response.body()?.results as List<ResultsItem>
 
